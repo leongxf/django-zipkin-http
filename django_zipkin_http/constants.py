@@ -1,6 +1,6 @@
-DEFAULT_ZIPKIN_ID_GENERATOR_CLASS = 'django-zipkin-http.id_generator.SimpleIdGenerator'
+DEFAULT_ZIPKIN_ID_GENERATOR_CLASS = 'django_zipkin_http.id_generator.SimpleIdGenerator'
 DEFAULT_ZIPKIN_SERVICE_NAME = "HTTP-service"
-DEFAULT_ZIPKIN_DATA_STORE_CLASS = 'django-zipkin-http.data_store.ThreadLocalDataStore'
+DEFAULT_ZIPKIN_DATA_STORE_CLASS = 'django_zipkin_http.data_store.ThreadLocalDataStore'
 
 DEFAULT_ZIPKIN_HTTP_HOST = "http://localhost:9411" 
 DEFAULT_ZIPKIN_HTTP_API = "/api/v1/"
