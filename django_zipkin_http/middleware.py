@@ -41,8 +41,7 @@ class ZipkinDjangoRequestParser(object):
             trace_id=ZipkinId.from_hex(request.META.get(self.trace_id_hdr_name, None)),
             span_id=ZipkinId.from_hex(request.META.get(self.span_id_hdr_name, None)),
             parent_span_id=ZipkinId.from_hex(request.META.get(self.parent_span_id_hdr_name, None)),
-            # sampled=request.META.get(self.sampled_hdr_name, 'false') == 'true',
-            sampled=True,
+            sampled=request.META.get(self.sampled_hdr_name, 'false') == 'true',            
             flags=request.META.get(self.flags_hdr_name, '0') == '1'
         )
 

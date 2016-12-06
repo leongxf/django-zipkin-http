@@ -71,6 +71,9 @@ class ThreadLocalDataStore(BaseDataStore):
     @_clear_and_retry_on_attribute_error
     def set(self, data):
         self.zipkin_data = data
+        self.annotations = []
+        self.binary_annotations = []
+        self.rpc_name = None
 
     @_clear_and_retry_on_attribute_error
     def _record_annotation(self, annotation):
